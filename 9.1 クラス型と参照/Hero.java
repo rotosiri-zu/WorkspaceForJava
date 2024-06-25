@@ -10,12 +10,14 @@ public class Hero {
   // 生まれた直後の動作を定義したHeroクラス
   // コンストラクタで引数を追加情報として受け取る
   // コンストラクタのオーバーロード
-  public Hero(String name) {
+  // 別のコンストラクタを呼び出す
+  public Hero(String name) { // コンストラクタ①
     this.hp = 100; // hpフィールドを100で初期化
     this.name = name; // 引数の値でnameフィールドを初期化
   }
-  public Hero() {
-    this.hp = 100;
-    this.name = "ダミー";
+  public Hero() { // コンストラクタ②
+    // this.hp = 100;
+    // this.name = "ダミー";
+    this("ダミー");
   }
 }
